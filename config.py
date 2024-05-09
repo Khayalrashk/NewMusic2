@@ -35,17 +35,17 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/venombolteop/VenomMusic",
+    "https://github.com/Khayalrashk/NewMusic2",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/VenomOwners")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/Venom_Chatz")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/k55dd")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/k55dd")
 
-
+AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
 AUTO_SUGGESTION_MODE = getenv("AUTO_SUGGESTION_MODE", "false")
 AUTO_SUGGESTION_TIME = int(
     getenv("AUTO_SUGGESTION_TIME", "5400"))
