@@ -12,7 +12,7 @@ from pyrogram.types import Message, InputTextMessageContent, InlineKeyboardMarku
 from youtube_search import YoutubeSearch
 
 from VenomX import app
-from VenomX.plugins.play.filters import command
+from VenomX.plugins.tools.filters import command
 
 def remove_if_exists(path):
     if os.path.exists(path):
