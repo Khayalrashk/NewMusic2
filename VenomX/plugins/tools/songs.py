@@ -1,14 +1,20 @@
 import os
 import re
-import requests
+
 import yt_dlp
-from strings.filters import command
+from pykeyboard import InlineKeyboard
 from pyrogram import filters
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
-from youtube_search import YoutubeSearch
-from VenomX import app
-from config import SUPPORT_CHAT
-import os.path
+from pyrogram.enums import ChatAction
+from pyrogram.types import (InlineKeyboardButton,
+                            InlineKeyboardMarkup, InputMediaAudio,
+                            InputMediaVideo, Message)
+
+from config import (BANNED_USERS, SONG_DOWNLOAD_DURATION,
+                    SONG_DOWNLOAD_DURATION_LIMIT)
+from VenomX import YouTube, app
+from VenomX.utils.decorators.language import language, languageCB
+from VenomX.utils.formatters import convert_bytes
+from VenomX.utils.inline.song import song_markup
 
 def is_valid_youtube_url(url):
     # Check if the provided URL is a valid YouTube URL
